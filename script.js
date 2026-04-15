@@ -103,7 +103,7 @@
   }
 
   /* ======================================================
-     5. CONTACT FORM (Netlify Forms)
+     5. CONTACT FORM (Web3Forms)
      Handles submission feedback without full page reload
   ====================================================== */
   const contactForm = document.getElementById('contact-form');
@@ -122,17 +122,20 @@
         }
 
         const formData = new FormData(contactForm);
-        const response = await fetch('/', {
+        const payload = Object.fromEntries(formData.entries());
+
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(formData).toString(),
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload),
         });
 
-        if (response.ok) {
+        const result = await response.json();
+        if (response.ok && result.success) {
           contactForm.style.display = 'none';
           if (formSuccess) formSuccess.style.display = 'block';
         } else {
-          throw new Error('Network response was not ok');
+          throw new Error(result.message || 'Network response was not ok');
         }
       } catch (err) {
         if (submitBtn) {

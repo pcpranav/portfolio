@@ -7,28 +7,34 @@
 
   <!-- SEO Meta -->
   <meta name="description" content="Pranav Chandra — Backend Software Engineer with 5+ years building scalable APIs, AI-powered products, and cloud-native systems on AWS and GCP." />
-  <link rel="canonical" href="https://pranav-chandra-portfolio.netlify.app/" />
+  <link rel="canonical" href="https://pranavchandra-portfolio.vercel.app/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://pranav-chandra-portfolio.netlify.app/" />
+  <meta property="og:url"         content="https://pranavchandra-portfolio.vercel.app/" />
   <meta property="og:title"       content="Pranav Chandra — Backend Software Engineer" />
   <meta property="og:description" content="Backend engineer specialising in scalable APIs, LLM integrations, and cloud-native architecture on AWS and GCP." />
-  <meta property="og:image"       content="https://pranav-chandra-portfolio.netlify.app/og-image.png" />
+  <meta property="og:image"       content="https://pranavchandra-portfolio.vercel.app/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Pranav Chandra — Backend Software Engineer" />
   <meta name="twitter:description" content="Backend engineer specialising in scalable APIs, LLM integrations, and cloud-native architecture on AWS and GCP." />
-  <meta name="twitter:image"       content="https://pranav-chandra-portfolio.netlify.app/og-image.png" />
+  <meta name="twitter:image"       content="https://pranavchandra-portfolio.vercel.app/og-image.png" />
 
-  <!-- Fonts -->
+  <!-- Theme color (mobile browser chrome) -->
+  <meta name="theme-color" content="#0a0f14" />
+
+  <!-- Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
 
-  <!-- Favicon (inline SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23060b14'/><text y='.9em' font-size='70' font-family='monospace' font-weight='900' fill='%23f5c842'>PC</text></svg>" />
+  <!-- Favicon (inline SVG data URI — charcoal + cyan, matches site palette) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0f14'/><text x='50%25' y='52%25' text-anchor='middle' dominant-baseline='central' font-size='52' font-family='ui-monospace,Menlo,monospace' font-weight='800' fill='%2300e5c7'>PC</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0f14'/><text x='50%25' y='52%25' text-anchor='middle' dominant-baseline='central' font-size='52' font-family='ui-monospace,Menlo,monospace' font-weight='800' fill='%2300e5c7'>PC</text></svg>" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
@@ -40,7 +46,7 @@
     "@type": "Person",
     "name": "Pranav Chandra",
     "jobTitle": "Backend Software Engineer",
-    "url": "https://pranav-chandra-portfolio.netlify.app/",
+    "url": "https://pranavchandra-portfolio.vercel.app/",
     "sameAs": [
       "https://github.com/pcpranav",
       "https://www.linkedin.com/in/pranav-chandra-33b92215b/"
@@ -124,7 +130,7 @@
             <p>I'm a Backend Software Engineer at <strong style="color:var(--blue)">LiftOff LLC</strong> with 5+ years of experience building scalable, production-grade systems that handle millions of daily requests.</p>
             <p>I specialise in designing RESTful and GraphQL APIs, integrating large language models (OpenAI, Gemini, Anthropic Claude), and deploying cloud-native applications on AWS and GCP.</p>
             <p>My work at LiftOff includes building backend infrastructure for <strong style="color:var(--gold)">QuiltAI</strong> — a social intelligence platform for brands — including data ingestion pipelines, AI-powered analytics, and multi-model LLM orchestration.</p>
-            <p>Outside of work, I build developer tools as open-source side projects. <strong>Webcraft Studio</strong> is an AI-powered website builder that turns plain-language prompts into deployed sites, and <strong>PromptCraft IO</strong> transforms app ideas into production-ready specs &mdash; both powered by Anthropic Claude.</p>
+            <p>Outside of work, I build developer tools and productivity apps as open-source side projects. <strong>Webcraft Studio</strong> turns plain-language prompts into deployed websites, <strong>PromptCraft IO</strong> transforms app ideas into production-ready specs, and <strong>Notely</strong> is a unified notes-and-tasks workspace that replaces the Notion-plus-To-Do app-switch.</p>
             <div class="about-links">
               <a href="mailto:pcpranavchandra@gmail.com" class="about-link" aria-label="Send email">&#128231; Email</a>
               <a href="https://github.com/pcpranav" target="_blank" rel="noopener noreferrer" class="about-link" aria-label="GitHub profile">&#128025; GitHub</a>
@@ -289,33 +295,50 @@
           <article class="proj-card featured">
             <div class="proj-badge">&#11088; Open Source &middot; Featured</div>
             <h3 class="proj-title">Webcraft Studio</h3>
-              <p class="proj-desc">AI-powered website builder that turns plain-language descriptions into fully styled, responsive, production-ready websites. Generates complete HTML, CSS, and JavaScript with working navigation &mdash; then lets you iterate, export as a zip, or deploy live to Netlify in one click. Powered by the Anthropic Claude API.</p>
+              <p class="proj-desc">AI-powered website builder that turns plain-language descriptions into fully styled, mobile-responsive websites in seconds. Iterate on the generated site, sync projects across devices via the cloud, then export as a zip or deploy live in one click. Powered by the Anthropic Claude API.</p>
               <div class="proj-tech">
                 <span class="tech-tag os">Open Source</span>
                 <span class="tech-tag">AI / Claude API</span>
                 <span class="tech-tag">Next.js</span>
                 <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Netlify</span>
+                <span class="tech-tag">Vercel</span>
               </div>
               <div class="proj-links">
                 <a href="https://github.com/pcpranav/sitecraft" target="_blank" rel="noopener noreferrer" class="proj-link">&#128025; GitHub</a>
-                <a href="https://wiz-craft.netlify.app" target="_blank" rel="noopener noreferrer" class="proj-link">&#128640; Live Demo</a>
+                <a href="https://wiz-craft.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link">&#128640; Live Demo</a>
               </div>
           </article>
 
           <article class="proj-card featured">
             <div class="proj-badge">&#11088; Open Source &middot; Featured</div>
             <h3 class="proj-title">PromptCraft IO (App Architect)</h3>
-              <p class="proj-desc">AI-powered design workflow tool that transforms app ideas into production-ready specifications. Guides users through five structured phases &mdash; App Flow, Page Map, System Design, Executive Summary, and TDD Prompt &mdash; outputting user journey maps, wireframes, DB schemas, API routes, and a developer-ready prompt with tests and CI config. Built on Claude AI.</p>
+              <p class="proj-desc">AI-powered design workflow that turns raw app ideas into production-ready specs before a line of code is written. Walks non-technical founders and PMs through five structured phases &mdash; App Flow, Page Map, System Design, Executive Summary, and TDD Prompt &mdash; producing user journeys, wireframes, DB schemas, API routes, and a developer-ready brief with tests and CI config. Runs on your own Claude account via Artifacts.</p>
               <div class="proj-tech">
                 <span class="tech-tag os">Open Source</span>
                 <span class="tech-tag">AI / Claude</span>
                 <span class="tech-tag">Claude Artifacts</span>
                 <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Netlify</span>
+                <span class="tech-tag">Vercel</span>
               </div>
               <div class="proj-links">
-                <a href="https://promptcraft-io.netlify.app" target="_blank" rel="noopener noreferrer" class="proj-link">&#128640; Live Demo</a>
+                <a href="https://promptcraft-io.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link">&#128640; Live Demo</a>
+              </div>
+          </article>
+
+          <article class="proj-card featured">
+            <div class="proj-badge">&#11088; Open Source &middot; Featured</div>
+            <h3 class="proj-title">Notely &mdash; Notes &amp; Tasks Workspace</h3>
+              <p class="proj-desc">A unified productivity workspace that fuses Notion-style block editing with Microsoft To Do-style task management, so you can capture thoughts and ship work without app-switching. Features a block editor with slash commands and drag-to-reorder, My Day focus view with due dates and priorities, flexible groups and lists, calendar sync, unified search across notes and tasks, offline support, and passwordless sign-in via Google or magic link. Installs as a mobile-first PWA.</p>
+              <div class="proj-tech">
+                <span class="tech-tag os">Open Source</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">BlockNote</span>
+                <span class="tech-tag">PWA</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://notes-app-v2-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link">&#128640; Live Demo</a>
               </div>
           </article>
 
@@ -347,19 +370,13 @@
         <div class="section-label">// download</div>
         <h2 id="resume-heading" class="section-title">Resume</h2>
         <div class="section-line"></div>
-        <p class="resume-desc">Two formats available &mdash; a visually designed version for humans and a plain-text optimised version for applicant tracking systems (ATS).</p>
+        <p class="resume-desc">One resume &mdash; designed to look great for human readers and parse cleanly through applicant tracking systems (ATS).</p>
         <div class="resume-grid">
           <div class="resume-card">
-            <div class="resume-icon" aria-hidden="true">&#127912;</div>
-            <h3 class="resume-card-title">Designed Resume</h3>
-            <p class="resume-card-desc">Polished layout with typography and colour &mdash; ideal for sending directly to hiring managers or sharing on LinkedIn.</p>
+            <div class="resume-icon" aria-hidden="true">&#128221;</div>
+            <h3 class="resume-card-title">Pranav Chandra &mdash; Resume</h3>
+            <p class="resume-card-desc">Single-column, ATS-safe layout with a clean visual treatment that matches this portfolio &mdash; send it straight to hiring managers or upload to any job portal.</p>
             <a href="resume/Pranav_Chandra_Resume.pdf" download class="btn btn-primary resume-btn">&#11015; Download PDF</a>
-          </div>
-          <div class="resume-card">
-            <div class="resume-icon" aria-hidden="true">&#128196;</div>
-            <h3 class="resume-card-title">ATS-Friendly Resume</h3>
-            <p class="resume-card-desc">Clean, single-column format with no graphics &mdash; optimised for automated screening systems used by recruiters.</p>
-            <a href="resume/Pranav_Chandra_Resume_ATS.pdf" download class="btn btn-outline resume-btn">&#11015; Download PDF</a>
           </div>
         </div>
       </div>
@@ -379,18 +396,16 @@
             <a href="https://www.linkedin.com/in/pranav-chandra-33b92215b/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">&#128188; LinkedIn</a>
           </div>
 
-          <!-- Netlify contact form -->
+          <!-- Web3Forms contact form -->
           <form
             id="contact-form"
             class="contact-form"
-            name="contact"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             novalidate
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <input type="hidden" name="access_key" value="11d41352-30a4-4c76-a31f-69e8fc9e99a6" />
+            <input type="hidden" name="from_name" value="Pranav Chandra Portfolio" />
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Name</label>

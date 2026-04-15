@@ -349,7 +349,7 @@ section { padding: 5.5rem 0; }
 /* ------ RESUME ------ */
 #resume { background: var(--bg2); }
 .resume-desc { color: var(--sub); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; max-width: 640px; }
-.resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+.resume-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; max-width: 560px; }
 .resume-card {
   background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg);
   padding: 2rem; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
