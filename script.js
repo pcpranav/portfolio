@@ -108,12 +108,15 @@
   ====================================================== */
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
 
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('[type="submit"]');
       const originalText = submitBtn?.textContent ?? 'Send Message';
+
+      if (formError) formError.style.display = 'none';
 
       try {
         if (submitBtn) {
@@ -142,7 +145,7 @@
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
         }
-        alert('Something went wrong. Please email me directly at pcpranavchandra@gmail.com');
+        if (formError) formError.style.display = 'block';
       }
     });
   }
@@ -161,9 +164,7 @@
           if (entry.isIntersecting) {
             const id = entry.target.id;
             desktopNavLinks.forEach((link) => {
-              link.style.color = link.getAttribute('href') === '#' + id
-                ? 'var(--text)'
-                : '';
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
             });
           }
         });

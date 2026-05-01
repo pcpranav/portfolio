@@ -12,21 +12,21 @@
     - Web-safe Arial fallback first in font stack
     - Selectable text (no text-as-image)
   */
-  @page { size: Letter; margin: 0.55in; }
+  @page { size: Letter; margin: 0.5in; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     color: #1a1a1a;
-    font-size: 10.5pt;
-    line-height: 1.45;
+    font-size: 10pt;
+    line-height: 1.42;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  body { max-width: 7.4in; margin: 0 auto; padding: 0.55in; background: #fff; }
+  body { max-width: 7.5in; margin: 0 auto; padding: 0.5in; background: #fff; }
   @media print { body { padding: 0; max-width: none; } }
 
   /* Header */
-  header { padding-bottom: 10px; border-bottom: 2px solid #008a75; margin-bottom: 4px; }
+  header { padding-bottom: 8px; border-bottom: 2px solid #008a75; margin-bottom: 4px; }
   h1 {
     font-size: 22pt; font-weight: 700; letter-spacing: -0.01em;
     color: #0a0f14;
@@ -35,33 +35,36 @@
   .contact { font-size: 9.5pt; color: #4a5568; margin-top: 6px; }
   .contact a { color: #4a5568; text-decoration: none; }
   .contact .sep { color: #a0aec0; }
+  .contact-row { margin-top: 2px; }
 
   /* Section headings */
   h2 {
     font-size: 10.5pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-    color: #008a75; margin-top: 16px; margin-bottom: 6px;
-    padding-bottom: 3px; border-bottom: 1px solid #cbd5e0;
+    color: #008a75; margin-top: 14px; margin-bottom: 5px;
+    padding-bottom: 2px; border-bottom: 1px solid #cbd5e0;
   }
 
   /* Job / project blocks */
-  h3 { font-size: 11pt; font-weight: 700; color: #0a0f14; margin-top: 9px; }
-  h3 .ghost { font-weight: 500; color: #4a5568; font-size: 10pt; }
-  .meta { font-size: 9.5pt; color: #4a5568; margin-top: 1px; margin-bottom: 3px; }
+  h3 { font-size: 10.5pt; font-weight: 700; color: #0a0f14; margin-top: 8px; }
+  h3 .ghost { font-weight: 500; color: #4a5568; font-size: 9.5pt; }
+  .meta { font-size: 9pt; color: #4a5568; margin-top: 1px; margin-bottom: 3px; }
   .meta .sep { color: #a0aec0; }
-  p { margin-top: 3px; }
-  ul { margin: 4px 0 0 1.1rem; }
-  li { margin-top: 3px; }
-  .tech { font-size: 9.5pt; color: #4a5568; margin-top: 3px; font-style: italic; }
+  p { margin-top: 2px; }
+  ul { margin: 3px 0 0 1.05rem; }
+  li { margin-top: 2px; }
+  .tech { font-size: 9pt; color: #4a5568; margin-top: 2px; font-style: italic; }
 
   /* Skills — linear key/value rows (single column, ATS-safe) */
-  .skills-block { margin-top: 4px; font-size: 10pt; }
-  .skills-block div { margin-top: 3px; }
+  .skills-block { margin-top: 3px; font-size: 9.75pt; }
+  .skills-block div { margin-top: 2px; }
   .skills-block b { color: #0a0f14; font-weight: 700; }
 
-  .proj + .proj { margin-top: 7px; }
+  .proj + .proj { margin-top: 6px; }
+  .proj { page-break-inside: avoid; break-inside: avoid; }
+  h3 { page-break-after: avoid; break-after: avoid; }
   .subhead {
-    font-size: 9.5pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: #4a5568; margin-top: 10px; margin-bottom: 2px;
+    font-size: 9pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #4a5568; margin-top: 8px; margin-bottom: 2px;
   }
 </style>
 </head>
@@ -69,29 +72,33 @@
 
 <header>
   <h1>Pranav Chandra</h1>
-  <div class="role">Backend Software Engineer</div>
+  <div class="role">Senior Software Engineer (Backend)</div>
   <div class="contact">
-    pcpranavchandra@gmail.com <span class="sep">·</span>
-    github.com/pcpranav <span class="sep">·</span>
-    linkedin.com/in/pranav-chandra-33b92215b <span class="sep">·</span>
-    pranavchandra-portfolio.vercel.app <span class="sep">·</span>
-    Bengaluru, India
+    <div>pcpranavchandra@gmail.com <span class="sep">·</span> Bengaluru, India</div>
+    <div class="contact-row">
+      pranavchandra-portfolio.vercel.app <span class="sep">·</span>
+      github.com/pcpranav <span class="sep">·</span>
+      linkedin.com/in/pranav-chandra-dev <span class="sep">·</span>
+      dev.to/pcpranav <span class="sep">·</span>
+      pcpranavchandra.medium.com
+    </div>
   </div>
 </header>
 
 <h2>Summary</h2>
-<p>Backend Software Engineer with 5+ years building scalable, production-grade APIs, AI/LLM-powered products, and cloud-native systems on AWS and GCP. Specialising in Python, Node.js, GraphQL, and multi-model LLM orchestration across OpenAI, Google Gemini, and Anthropic Claude.</p>
+<p>Senior Software Engineer (Backend) with 5+ years building scalable, production-grade APIs, AI/LLM-powered products, and event-driven systems on AWS and GCP. Specialising in Python, Node.js, GraphQL, multi-model LLM orchestration across OpenAI, Google Gemini, and Anthropic Claude, and real-time streaming architectures across booking, payments, and social-intelligence platforms.</p>
 
 <h2>Experience</h2>
-<h3>Backend Software Engineer, LiftOff LLC</h3>
-<div class="meta">Bengaluru, India <span class="sep">·</span> 2019 — Present</div>
+<h3>Senior Software Engineer (Backend), LiftOff LLC</h3>
+<div class="meta">Bengaluru, India <span class="sep">·</span> 2021 — Present</div>
 <ul>
-  <li>Engineered scalable backend systems and APIs handling millions of daily requests across the QuiltAI social intelligence platform.</li>
-  <li>Integrated OpenAI, Google Gemini, and Anthropic Claude APIs for AI-powered analytics and content generation; led multi-model LLM orchestration, prompt engineering, and response optimisation for production workloads.</li>
-  <li>Built and maintained microservices deployed on AWS and GCP with Docker and CI/CD for zero-downtime deployments.</li>
-  <li>Developed social intelligence infrastructure: data ingestion pipelines for Instagram, TikTok, and YouTube content at scale.</li>
-  <li>Contributed to the Bowie Barker web platform — booking flows, member management, and service integrations.</li>
-  <li>Built backend services for Okay Humans therapy platform — therapist discovery, session booking, payments, and onboarding.</li>
+  <li>Engineered scalable backend systems and APIs handling millions of daily requests across QuiltAI&rsquo;s social intelligence platform.</li>
+  <li>Led multi-model LLM orchestration across OpenAI, Google Gemini, and Anthropic Claude — covering prompt engineering, response optimisation, and cost-aware model routing for production workloads.</li>
+  <li>Built data ingestion pipelines for Instagram, TikTok, and YouTube — processing high-volume social signal into structured, analytics-ready datasets.</li>
+  <li>Architected microservices on AWS and GCP with Docker and GitHub Actions, enabling zero-downtime deployments across services.</li>
+  <li>Delivered backend services across multiple client web platforms — Bowie Barker, Squeeze, and Okay Humans — covering booking flows, membership management, and customer-facing experiences.</li>
+  <li>Built Stripe-based payments and subscription infrastructure (recurring billing, webhooks); integrated booking platforms (Zenoti, MyTime) and lifecycle email (Klaviyo, Brevo); orchestrated background jobs and crons with BullMQ.</li>
+  <li>Designed real-time and event-driven systems — SSE streams in FastAPI for LLM responses, Redis-backed GraphQL subscriptions, webhook-driven integrations, and async producer/consumer pipelines in Python; orchestrated workflows with Prefect, Google Workflows, and Cloud Tasks; deployed edge compute on Cloudflare Workers + KV.</li>
 </ul>
 
 <h2>Projects</h2>
@@ -100,51 +107,51 @@
 
 <div class="proj">
   <h3>QuiltAI — Sphere Platform</h3>
-  <p>Social intelligence platform for brands. Backend infrastructure powering AI-driven analytics, market segmentation, and multi-model LLM pipelines.</p>
-  <div class="tech">Tech: Python, GraphQL, PostgreSQL, Redis, AWS, OpenAI API, Google Gemini, Anthropic Claude.</div>
+  <p>Social intelligence platform for brands. Backend infrastructure powering AI-driven analytics, market segmentation, and multi-model LLM pipelines, processing millions of social signals daily.</p>
+  <div class="tech">Tech: Python, GraphQL, PostgreSQL, Redis, AWS, OpenAI API, Google Gemini, Anthropic Claude. URL: quilt.ai/sphere</div>
 </div>
 
 <div class="proj">
   <h3>Bowie Barker — Web Platform</h3>
   <p>Full-stack web platform for a premium pet grooming franchise. Booking systems, membership management, and third-party API integrations.</p>
-  <div class="tech">Tech: Node.js, TypeScript, REST APIs, PostgreSQL, GCP.</div>
+  <div class="tech">Tech: Node.js, TypeScript, REST APIs, PostgreSQL, GCP. URL: bowiebarker.com</div>
 </div>
 
 <div class="proj">
   <h3>Okay Humans — Therapy Platform</h3>
   <p>Mental health platform connecting users with licensed therapists. Backend for therapist discovery via video bios, session booking, payments, and onboarding.</p>
-  <div class="tech">Tech: Node.js, REST APIs, PostgreSQL, Cloud.</div>
+  <div class="tech">Tech: Node.js, REST APIs, PostgreSQL, Stripe, Cloud. URL: okayhuman.vercel.app</div>
+</div>
+
+<div class="proj">
+  <h3>Squeeze — Massage Booking Platform</h3>
+  <p>Web platform for a modern massage therapy franchise. Backend services for booking flows, membership management, location and therapist directories, and customer-facing service catalogues across multiple studio locations.</p>
+  <div class="tech">Tech: Node.js, REST APIs, PostgreSQL, Stripe, Zenoti, Cloud. URL: squeezemassage.com</div>
 </div>
 
 <div class="subhead">Personal and Open Source</div>
 
 <div class="proj">
-  <h3>Webcraft Studio <span class="ghost">(Open Source)</span></h3>
-  <p>AI-powered website builder that turns plain-language descriptions into mobile-responsive, production-ready sites in seconds. Iterate in-app, sync projects via the cloud, export as zip, or deploy live in one click.</p>
-  <div class="tech">Tech: Next.js, TypeScript, Anthropic Claude API, Vercel. URL: wiz-craft.vercel.app</div>
-</div>
-
-<div class="proj">
-  <h3>PromptCraft IO (App Architect) <span class="ghost">(Open Source)</span></h3>
-  <p>AI-powered design workflow that turns app ideas into production-ready specs through five structured phases — App Flow, Page Map, System Design, Executive Summary, and TDD Prompt — outputting user journeys, wireframes, DB schemas, API routes, and a developer-ready brief with tests and CI.</p>
+  <h3>App Architect <span class="ghost">(Open Source)</span></h3>
+  <p>AI-powered design workflow that turns raw app ideas into production-ready specs through five structured phases — App Flow, Page Map, System Design, Executive Summary, and TDD Prompt — outputting user journeys, wireframes, DB schemas, API routes, and a developer-ready brief with tests and CI.</p>
   <div class="tech">Tech: Claude Artifacts, JavaScript, Vercel. URL: promptcraft-io.vercel.app</div>
-</div>
-
-<div class="proj">
-  <h3>Notely — Notes and Tasks Workspace <span class="ghost">(Open Source)</span></h3>
-  <p>Unified productivity workspace fusing Notion-style block editing with Microsoft To Do-style task management. Block editor with slash commands and drag-to-reorder, My Day focus view with due dates and priorities, flexible groups and lists, calendar sync, unified search, offline support, and passwordless sign-in. Installs as a mobile-first PWA.</p>
-  <div class="tech">Tech: Next.js, Supabase, BlockNote, PWA, Vercel. URL: notes-app-v2-one.vercel.app</div>
 </div>
 
 <h2>Skills</h2>
 <div class="skills-block">
-  <div><b>AI and LLMs:</b> OpenAI API, Google Gemini, Anthropic Claude, Prompt Engineering, LLM Orchestration</div>
-  <div><b>Backend:</b> Python, Node.js, TypeScript, JavaScript, GraphQL, REST APIs, Microservices</div>
-  <div><b>Databases:</b> PostgreSQL, MongoDB, Redis</div>
-  <div><b>Cloud and DevOps:</b> AWS, GCP, Vercel, Docker, CI/CD, Git</div>
+  <div><b>AI and LLMs:</b> Anthropic Claude, OpenAI API, Google Gemini, Prompt Engineering, LLM Orchestration, RAG</div>
+  <div><b>Backend:</b> Python, Node.js, TypeScript, FastAPI, Express, GraphQL, REST APIs, BullMQ</div>
+  <div><b>Databases:</b> PostgreSQL, MongoDB, Redis, Prisma, pgvector</div>
+  <div><b>Cloud and DevOps:</b> AWS, GCP, Vercel, Cloudflare Workers, Docker, GitHub Actions</div>
+  <div><b>Streaming and Workflows:</b> SSE, GraphQL Subscriptions, Webhooks, Prefect, Google Workflows, Cloud Tasks</div>
+  <div><b>Integrations:</b> Stripe, Zenoti, MyTime, Klaviyo, Brevo</div>
 </div>
 
 <h2>Education</h2>
+<h3>Full Stack Development — Zen Class</h3>
+<div class="meta">GUVI (IITM Pravartak Certified) <span class="sep">·</span> 2020 — 2021</div>
+<p>JavaScript &amp; ES6, ReactJS with Redux, Node.js with Express, MongoDB, MySQL — career-pivot programme with live mentorship and hands-on projects.</p>
+
 <h3>Bachelor of Engineering, Civil Engineering</h3>
 <div class="meta">Dayananda Sagar College of Engineering, Bangalore <span class="sep">·</span> Aug 2014 — Aug 2018</div>
 
