@@ -181,6 +181,20 @@ h1 span {
   background: var(--blue-dim); border-color: var(--blue);
   color: var(--blue); transform: translateY(-2px);
 }
+.btn-garage {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.7rem 1.5rem; border-radius: var(--r-sm);
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: #F59E0B; color: #0a0a0a;
+  transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+  white-space: nowrap; border: none; cursor: pointer;
+}
+.btn-garage:hover {
+  background: #fbbf24; transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245,158,11,0.25); color: #0a0a0a;
+}
+.about-garage-row { margin-top: 1.25rem; }
 
 /* ------ SECTIONS ------ */
 section { padding: 5.5rem 0; }
