@@ -21,8 +21,11 @@
   --text:      #e6f1f5;
   --muted:     #6b7785;
   --sub:       #9aa5b1;
+  --amber:     #F59E0B;
+  --amber-dim: rgba(245, 158, 11, 0.1);
   --font:      'Inter', sans-serif;
   --mono:      'JetBrains Mono', monospace;
+  --display:   'Bebas Neue', 'Inter', sans-serif;
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px;
 }
 
@@ -65,9 +68,9 @@ a:hover { color: var(--gold); }
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
 }
 .nav-logo {
-  font-weight: 800; font-size: 1.15rem; color: var(--gold);
-  letter-spacing: -0.02em; font-family: var(--mono);
-  text-decoration: none; transition: color 0.2s;
+  font-weight: 400; font-size: 1.5rem; color: var(--gold);
+  letter-spacing: 0.06em; font-family: var(--display);
+  text-decoration: none; transition: color 0.2s; line-height: 1;
 }
 .nav-logo:hover { color: var(--blue); }
 .nav-links { display: flex; gap: 2.25rem; list-style: none; }
@@ -127,13 +130,25 @@ a:hover { color: var(--gold); }
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
     radial-gradient(ellipse 70% 55% at 50% -5%, rgba(0,229,199,0.12) 0%, transparent 62%),
-    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(196,201,212,0.05) 0%, transparent 55%);
+    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(196,201,212,0.05) 0%, transparent 55%),
+    linear-gradient(rgba(230,241,245,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230,241,245,0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 40%, transparent 100%);
 }
 .hero-inner { position: relative; z-index: 1; max-width: 720px; }
 
+.hero-kicker {
+  font-family: var(--mono); font-size: 0.75rem; color: var(--blue);
+  letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0.9;
+}
+
 h1 {
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 1.25rem;
+  font-family: var(--display);
+  font-size: clamp(3.8rem, 11vw, 7rem);
+  font-weight: 400; letter-spacing: 0.015em; line-height: 0.92;
+  text-transform: uppercase; margin-bottom: 1.5rem;
 }
 h1 span {
   background: linear-gradient(135deg, var(--blue) 20%, var(--gold) 80%);
@@ -205,8 +220,10 @@ section { padding: 5.5rem 0; }
   letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem; opacity: 0.85;
 }
 .section-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.4rem); font-weight: 700;
-  letter-spacing: -0.03em; margin-bottom: 0.9rem;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4.5vw, 3.1rem); font-weight: 400;
+  letter-spacing: 0.02em; text-transform: uppercase; line-height: 1;
+  margin-bottom: 0.9rem;
 }
 .section-line {
   width: 52px; height: 3px;
@@ -317,13 +334,13 @@ section { padding: 5.5rem 0; }
   box-shadow: 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 .proj-card:hover::before { opacity: 1; }
-.proj-card.featured { border-color: rgba(212,212,212,0.2); }
-.proj-card.featured:hover { border-color: rgba(212,212,212,0.45); }
+.proj-card.featured { border-color: rgba(245,158,11,0.22); }
+.proj-card.featured:hover { border-color: rgba(245,158,11,0.5); }
 
 .proj-badge {
   display: inline-flex; align-items: center; gap: 0.3rem;
-  font-family: var(--mono); font-size: 0.68rem; color: var(--gold);
-  border: 1px solid rgba(212,212,212,0.3); background: rgba(212,212,212,0.07);
+  font-family: var(--mono); font-size: 0.68rem; color: var(--amber);
+  border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.07);
   padding: 0.2rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.04em;
 }
 .proj-badge.work {
@@ -336,7 +353,7 @@ section { padding: 5.5rem 0; }
   font-size: 0.68rem; font-family: var(--mono); padding: 0.22rem 0.65rem;
   border-radius: 4px; background: rgba(0,229,199,0.08); color: var(--blue);
 }
-.tech-tag.os { background: rgba(212,212,212,0.08); color: var(--gold); }
+.tech-tag.os { background: rgba(245,158,11,0.08); color: var(--amber); }
 .tech-tag.work { background: rgba(154,184,127,0.08); color: var(--green); }
 .proj-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .proj-link {
