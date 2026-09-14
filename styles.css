@@ -364,6 +364,9 @@ section { padding: 5.5rem 0; }
 }
 .proj-link:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); }
 
+/* Google Play glyph: official artwork, original colours, never redrawn. */
+.play-glyph { height: 14px; width: auto; display: block; flex: none; }
+
 /* ------ EDUCATION ------ */
 #education { background: var(--bg2); }
 .edu-card {
