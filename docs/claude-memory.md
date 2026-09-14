@@ -100,9 +100,13 @@ the page count is still 1 before committing:
 mdls -name kMDItemNumberOfPages resume/Pranav_Chandra_Resume.pdf
 ```
 
-Still open as of 2026-09-14: the resume lists Nuo with the `nuo-app.vercel.app`
-URL and does NOT mention the Play listing. Left alone deliberately — a one-page
-resume is tightly tuned and Pranav had not asked for it.
+Done 2026-09-14: the Nuo entry now reads "mobile-first PWA published on Google
+Play as an Android app, with unit + E2E test suites." (was "with an Android
+(TWA) release"). The PDF was regenerated with the command above and verified
+still **one page** with the layout unchanged — `@page { size: Letter; margin:
+0.5in }` in `resume.html` is why headless Chrome reproduces it faithfully. The
+`URL:` line still points at `nuo-app.vercel.app`; a Play store URL is too long
+for that line and the body sentence already carries the signal.
 
 ## Incident: index.html missing locally
 
